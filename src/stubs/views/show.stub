@@ -1,7 +1,7 @@
-@extends('{{layout}}')
+@extends('{{adminlte::page}}')
 
 @section('template_title')
-    {{ ${{modelNameLowerCase}}->name ?? 'Show {{modelTitle}}' }}
+    {{ ${{modelNameLowerCase}}->name ?? 'Ver {{modelTitle}}' }}
 @endsection
 
 @section('content')
@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show {{modelTitle}}</span>
+                            <span class="card-title">Ver {{modelTitle}}</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('{{modelRoute}}.index') }}"> Back</a>
+                            <a class="btn btn-warning" href="{{ route('{{modelRoute}}.index') }}"> Volver</a>
                         </div>
                     </div>
 

@@ -1,7 +1,7 @@
-@extends('{{layout}}')
+@extends('{{adminlte::page}}')
 
 @section('template_title')
-    Create {{modelTitle}}
+    Crear {{modelTitle}}
 @endsection
 
 @section('content')
@@ -13,7 +13,10 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create {{modelTitle}}</span>
+                        <span class="card-title">Crear {{modelTitle}}</span>
+                        <div class="float-right">
+                            <a class="btn btn-warning" href="{{ route('{{modelRoute}}.index') }}"> Volver</a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('{{modelRoute}}.store') }}"  role="form" enctype="multipart/form-data">
